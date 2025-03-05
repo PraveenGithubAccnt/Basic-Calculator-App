@@ -1,7 +1,7 @@
 import { TouchableOpacity, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 
-export default function forminput() {
+export default function startcal() {
     const router = useRouter();
 
     const calcu = () => {
@@ -12,7 +12,7 @@ export default function forminput() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text style={{ fontSize: 20, fontWeight: "bold", color: "#3498db",  marginBottom: 500  }}>
-        Let's Calculate the Numbers
+        Let's Calculate
       </Text>
       <TouchableOpacity 
           onPress={calcu} 

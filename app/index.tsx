@@ -12,7 +12,7 @@ export default function Index() {
 
   const calcu = () => {
     console.log("Submitting:", { fname, lname, email, password });
-    router.push("/forminput");
+    router.push("/startcal");
   };
 
   const clearFields = () => {
