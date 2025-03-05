@@ -1,4 +1,4 @@
 <<<<<<< HEAD
 # Basic-Calculator-App
-A basic calculator app designed for learning React Native Development   
+A basic calculator app designed for learning React Native Development usnig Expo    
 
