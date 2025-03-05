@@ -6,5 +6,6 @@ export default function RootLayout()
   <Stack>
    <Stack.Screen name="index" options={{headerShown:false}}/>
    <Stack.Screen name="about" options={{headerShown:false}}/>
+   <Stack.Screen name="forminput" options={{headerShown:false}}/>
   </Stack>);
 };
