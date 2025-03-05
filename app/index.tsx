@@ -11,7 +11,6 @@ export default function Index() {
   const [password, setPassword] = useState("");
 
   const calcu = () => {
-    console.log("Submitting:", { fname, lname, email, password });
     router.push("/startcal");
   };
 
