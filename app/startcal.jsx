@@ -1,8 +1,13 @@
 import { TouchableOpacity, Text, View } from "react-native";
-import { useRouter } from "expo-router";
+import { useRouter, useLocalSearchParams } from "expo-router"; 
+
 
 export default function startcal() {
-    const router = useRouter();
+  const router = useRouter();
+  const params = useLocalSearchParams(); 
+
+  const name = params.name ? decodeURIComponent(params.name) : "N/A";
+  const lastName = params.lastName ? decodeURIComponent(params.lastName) : "N/A";
 
     const calcu = () => {
       router.push("/about"); 
@@ -12,8 +17,9 @@ export default function startcal() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text style={{ fontSize: 20, fontWeight: "bold", color: "#3498db",  marginBottom: 500  }}>
-        Let's Calculate
+        Let's Calculate {name}{lastName}
       </Text>
+  
       <TouchableOpacity 
           onPress={calcu} 
           style={{

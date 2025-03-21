@@ -11,8 +11,12 @@ export default function Index() {
   const [password, setPassword] = useState("");
 
   const calcu = () => {
-    router.push("/startcal");
+    router.push({
+      pathname: "/startcal",
+      params: { name: encodeURIComponent(fname), lastName: encodeURIComponent(lname) },
+    });
   };
+  
 
   const clearFields = () => {
     setFname("");
@@ -49,7 +53,7 @@ export default function Index() {
       <TextInput
         style={styles.textinput}
         placeholder="Enter Password"
-        secureTextEntry 
+        secureTextEntry={true} 
         onChangeText={(text) => setPassword(text)}
         value={password}
       />
